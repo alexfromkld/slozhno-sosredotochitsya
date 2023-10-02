@@ -40,3 +40,62 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+.page {
+  background-image: url(../images/cover-image-dark.png);
+  object-fit: cover;
+  width: 100%;
+  font-family: var(--main-font, sans-serif);
+  font-size: 18px;
+}
+
+.decoration__item {
+  position: relative;
+  color: var(--accent-color);
+  margin-block-end: 40.5px;
+  inset-inline-start: -25px;
+}
+
+.decoration__item::before {
+  content: '';
+  position: absolute;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  /* box-shadow: 4px 4px px var(--accent-color); !! */
+  inset-inline-end: -20px;
+  inset-block-end: 30%;
+}
+
+.header {
+  padding: 10px;
+  display: grid;
+  justify-items: flex-end;
+}
+
+.header__title {
+  color: #d800ff;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+}
+
+.text-shadow {
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: none;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
