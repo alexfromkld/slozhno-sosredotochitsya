@@ -67,7 +67,7 @@ a {
   content: '';
   position: absolute;
   left: 10px;
-  bottom: -40px;
+  bottom: 20px;
   inline-size: 25px;
   block-size: 25px;
   border-block-end: 1px solid var(--accent-color);
@@ -97,7 +97,7 @@ a {
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
@@ -116,7 +116,6 @@ a {
   display: grid;
   justify-items: flex-end;
   position: relative;
-  margin-block-end: 55px; /*вроде это надо убрать, оно мешает */
 }
 
 .header__title {
@@ -130,7 +129,7 @@ a {
 }
 
 .text-shadow {
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 .title-decor {
@@ -141,10 +140,29 @@ a {
   font-size: 18px;
 }
 
+.header__topic {
+  margin-block-end: 66px;
+}
+
 .content__section {
   padding-inline: 10px;
   background-color: var(--text-color-secondary);
-  padding-block-start: 50px;
+}
+
+.content__section:first-of-type {
+  padding-block-start: 40px;
+}
+
+.content__section:last-of-type {
+  padding-block-end: 40px;
+}
+
+.content__section:not(:last-of-type) {
+  padding-block-end: 50px;
+}
+
+.content__section-wrapper > div:not(:last-of-type) {
+  padding-block-end: 20px;
 }
 
 .content__topic {
@@ -171,6 +189,11 @@ a {
   margin-block-start: 20px;
 }
 
+.image__container > h2 {
+  width: 100%;
+  margin-block-end: 10px;
+}
+
 .content__image{
   display: grid;
   gap: 10px;
@@ -179,10 +202,6 @@ a {
 .content__image-item {
   width: 100%;
 }
-
-/* .content__image-item:last-of-type {
-  margin-block-end: 40px;
-} */
 
 .footer {
   padding: 10px;
@@ -210,9 +229,19 @@ a {
   border-inline-start: 1px solid var(--accent-color);
 }
 
-@media (768px <= width < 1024px) {
+@media (768px < width < 1024px) {
   .page {
     background-size: cover;
+  }
+
+  .decorated-zone::after {
+    right: 20px;
+    top: 20px;
+  }
+
+  .decorated-zone::before {
+    left: 20px;
+    bottom: 20px;
   }
   
   .header {
@@ -263,6 +292,34 @@ a {
   .content__section-grid-2 > h2 {
     width: 100%;
   }
+}
+                                             /* TABLET SIZE + DESKTOP*/
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .content__section:first-of-type {
+    padding-block-start: 60px;
+  }
+
+  .content__section:not(:last-of-type) {
+    padding-block-end: 80px;
+  }
+
+  .content__section-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .content__title-grid-1, .content__text-grid-1 {
+    grid-column: 2;
+  }
+
+  .content__section {
+    padding-inline: 20px;
+  }
 
   .image__container > h2 {
     width: 100%;
@@ -306,8 +363,37 @@ a {
     grid-area: e;
   }
 
+  .footer {
+    padding: 20px;
+  }
+
   .footer__title {
     margin-block: 462px;
+  }
+
+  .decorated-zone-footer::after {
+    right: 20px;
+    top: 40px;
+  }
+
+  .decorated-zone::before {
+    left: 20px;
+    bottom: 30px;
+  }
+}
+
+                                             /* DESKTOP SIZE */
+
+@media (width >= 1024px) {
+  .content__section-wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content__topic-grid-2 {
+    display: grid;
+    grid-template-columns: 30% 70%;
   }
 }
 
