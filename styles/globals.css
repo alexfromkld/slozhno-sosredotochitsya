@@ -385,6 +385,15 @@ a {
                                              /* DESKTOP SIZE */
 
 @media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    grid-row: 1/2;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
   .content__section-wrapper {
     display: grid;
     gap: 20px;
