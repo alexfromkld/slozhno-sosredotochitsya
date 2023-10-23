@@ -409,7 +409,14 @@ a {
     inset-block-end: 40%;
   }
 
+  .decorated-zone::after {
+    right: 20px;
+    top: 20px;
+  }
+
   .header__title {
+    font-size: 157px;
+    margin-inline-start: -20px;
     grid-column: 2 span;
     margin-block: 274px 114px;
   }
@@ -417,7 +424,11 @@ a {
   .header__topic {
     grid-row: 3;
     grid-column: 2/4;
-    margin-block-end: 134px;
+    margin-block-end: 114px;
+  }
+
+  .decorated-zone::before {
+    bottom: 40px;
   }
 
   .content__section-wrapper {
@@ -433,6 +444,7 @@ a {
 
   .footer__title {
     margin-block: 319px;
+    font-size: 157px;
   }
 }
 
