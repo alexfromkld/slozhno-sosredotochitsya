@@ -5,8 +5,13 @@
 
 :root {
   --bg-color: #000028;
+  --bg-color-secondary: #ff0070;
   --accent-color: #ff0070;
+  --border-color: #ff0070;
+  --title-color: #d800ff;
   --text-color: #f1b2ce;
-  --text-color-secondary: #000028;
+  --text-color-secondary: #ff0070;
+  --text-color-topic: #000028;
+  --button-hover: rgba(255, 0, 112, 0.40);
   --main-font: 'IBM Plex mono';
 }
