@@ -4,9 +4,104 @@
   переключая тему
 */
 
+:root .theme_dark {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --bg-color-secondary: #ff0070;
+  --accent-color: #ff0070;
+  --border-color: #ff0070;
+  --title-color: #d800ff;
+  --text-color: #f1b2ce;
+  --text-color-secondary: #ff0070;
+  --text-color-topic: #000028;
+  --button-hover: rgba(255, 0, 112, 0.40);
+  --main-font: 'IBM Plex mono';
+}
+
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: var(--bg-image);
+  background-color: var(--bg-color, #000028);
 }
+
+.theme_dark .decorated-zone::after {
+  border-block-start: 1px solid var(--border-color);
+  border-inline-end: 1px solid var(--border-color);
+}
+
+.theme_dark .decorated-zone::before {
+  border-block-end: 1px solid var(--border-color);
+  border-inline-start: 1px solid var(--border-color);
+}
+
+.theme_dark .decoration__item {
+  visibility: visible;
+  color: var(--accent-color);
+}
+
+.theme_dark .decoration__item::before {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 10px 3px var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button {
+  color: var(--text-color-secondary);
+}
+
+.theme_dark .header__theme-menu-button:hover {
+  outline: 1px solid var(--button-hover);
+}
+
+.theme_dark .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--border-color);
+}
+
+.theme_dark .header__title {
+  color: var(--title-color);
+}
+
+.theme_dark .text-shadow {
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.theme_dark .title-decor {
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color-topic);
+}
+
+.theme_dark .content__topic {
+  color: var(--text-color-secondary);
+}
+
+.theme_dark .content__text {
+  color: var(--text-color);
+}
+
+.theme_dark .content__text-link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.theme_dark .content__text-link:focus {
+  outline: 1px solid var(--text-color);
+}
+
+.theme_dark .footer__title {
+  color: var(--title-color);
+}
+
+.theme_dark .decorated-zone-footer::before {
+  border-block-end: 1px solid var(--border-color);
+  border-inline-start: 1px solid var(--border-color);
+}
+
+
+
+
+

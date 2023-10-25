@@ -4,7 +4,23 @@
   переключая тему
 */
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image: url(../images/cover-image-light.png);
+    --bg-color: #fff1f7;
+    --bg-color-secondary: #ff8dcb;
+    --title-color: #ffc2e6;
+    --text-color: #353430;
+    --accent-color: #ff8dcb;
+    --text-color-secondary: #353430;
+    --text-color-topic: #353430;
+    --button-hover: rgba(50, 49, 45, 0.40);
+    --border-color: #353430;
+  }
+}
+
 :root .theme_light{
+  --bg-image: url(../images/cover-image-light.png);
   --bg-color: #fff1f7;
   --bg-color-secondary: #ff8dcb;
   --title-color: #ffc2e6;
@@ -21,7 +37,8 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  background-image: url(../images/cover-image-light.png);
+  background-image: var(--bg-image);
+  background-color: var(--bg-color, #fff1f7);
 }
 
 .theme_light.decorated-zone::after {
@@ -29,13 +46,13 @@
   border-inline-end: 1px solid var(--border-color);
 }
 
+.theme_light .decoration__item {
+  visibility: hidden;
+}
+
 .theme_light.decorated-zone::before {
   border-block-end: 1px solid var(--border-color);
   border-inline-start: 1px solid var(--border-color);
-}
-
-.theme_light.decoration__item {
-  color: var(--accent-color);
 }
 
 .theme_light.decoration__item::before {
