@@ -95,6 +95,14 @@
   color: var(--text-color-secondary);
 }
 
+.theme_light.content__text-link:focus-visible {
+  outline: none;
+} 
+
+.theme_light.content__text-link:focus {
+  outline: 1px solid var(--text-color);
+}
+
 .theme_light.footer__title {
   color: var(--title-color);
 }
