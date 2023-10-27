@@ -56,7 +56,11 @@
 }
 
 .theme_dark .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.theme_dark .header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--border-color);
 }
 
 .theme_dark .header__theme-menu-button_active {

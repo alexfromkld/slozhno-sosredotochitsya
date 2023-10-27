@@ -73,12 +73,12 @@
   outline: 1px solid var(--button-hover);
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   outline: none;
 }
 
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: -1px;
 }
 
@@ -168,12 +168,12 @@
   border-bottom: 1px solid var(--text-color);
 }
 
-.content__text-link:focus {
-  outline: 1px solid var(--text-color);
-}
-
 .content__text-link:focus-visible {
   outline: none;
+}
+
+.content__text-link:focus {
+  outline: 1px solid var(--text-color);
 }
 
 .content__text:not(:last-of-type) {
